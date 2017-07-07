@@ -55,7 +55,7 @@ class MarlinSettings {
       static void report(bool forReplay=false);
     #else
       FORCE_INLINE
-      static void report(bool forReplay=false) { UNUSED(forReplay); }
+      static void report(bool forReplay=false) { }
     #endif
 
   private:

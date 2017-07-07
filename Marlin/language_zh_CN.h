@@ -21,7 +21,7 @@
  */
 
 /**
- * Simplified Chinese
+ * Simplified Chineses
  *
  * LCD Menu Messages
  * See also https://github.com/MarlinFirmware/Marlin/wiki/LCD-Language
