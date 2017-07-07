@@ -21,8 +21,7 @@
  */
 
 /**
- * Japanese (Kana)
- * UTF-8 for Graphical Display
+ * Japanese (Kana UTF8 version)
  *
  * LCD Menu Messages
  * See also https://github.com/MarlinFirmware/Marlin/wiki/LCD-Language
