@@ -318,9 +318,9 @@
   // Ultimaker
 
 //check config
-  #define  DEFAULT_Kp 25.80
-  #define  DEFAULT_Ki 2.62
-  #define  DEFAULT_Kd 63.41
+  #define  DEFAULT_Kp 14.67
+  #define  DEFAULT_Ki 1.01
+  #define  DEFAULT_Kd 53.17
   // MakerGear
   //#define  DEFAULT_Kp 7.0
   //#define  DEFAULT_Ki 0.1
@@ -361,9 +361,9 @@
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define  DEFAULT_bedKp 227.69
-  #define  DEFAULT_bedKi 31.95
-  #define  DEFAULT_bedKd 405.68
+  #define  DEFAULT_bedKp 907.71
+  #define  DEFAULT_bedKi 178.72
+  #define  DEFAULT_bedKd 1152.56
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -447,8 +447,8 @@
   // #define ENDSTOPPULLUP_XMAX
   // #define ENDSTOPPULLUP_YMAX
   // #define ENDSTOPPULLUP_ZMAX
-  // #define ENDSTOPPULLUP_XMIN
-  // #define ENDSTOPPULLUP_YMIN
+  #define ENDSTOPPULLUP_XMIN
+  #define ENDSTOPPULLUP_YMIN
   // #define ENDSTOPPULLUP_ZMIN
   #define ENDSTOPPULLUP_ZMIN_PROBE
 #endif
@@ -456,11 +456,11 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING true// set to true to invert the logic of the endstop.
 #define X_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
-#define Z_MIN_PROBE_ENDSTOP_INVERTING false // set to true to invert the logic of the probe.
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true // set to true to invert the logic of the probe.
 
 // Enable this feature if all enabled endstop pins are interrupt-capable.
 // This will remove the need to poll the interrupt pins, saving many CPU cycles.
@@ -491,12 +491,8 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-<<<<<<< HEAD
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 400, 204}
-=======
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {100, 100, 400, 204}
->>>>>>> 8c607b53d497525edc0a85ddcc04c5d10c7bc14c
 
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 400, 204}
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
@@ -612,7 +608,9 @@
 #endif
 
 /**
- * Enable if probing seems unreliable. Heaters and/or fans - consistent with the
+ * Enable if probing seems unreliable. Heaters and/or fan
+ s - consistent with the
+
  * options selected below - will be disabled during probing so as to minimize
  * potential EM interference by quieting/silencing the source of the 'noise' (the change
  * in current flowing through the wires).  This is likely most useful to users of the
@@ -747,9 +745,9 @@
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 195
-#define Y_MAX_POS 180
-#define Z_MAX_POS 240
+#define X_MAX_POS 250
+#define Y_MAX_POS 210
+#define Z_MAX_POS 200
 
 // If enabled, axes won't move below MIN_POS in response to movement commands.
 #define MIN_SOFTWARE_ENDSTOPS
@@ -841,10 +839,10 @@
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Set the boundaries for probing (where the probe can reach).
-  #define LEFT_PROBE_BED_POSITION 40
-  #define RIGHT_PROBE_BED_POSITION 170
-  #define FRONT_PROBE_BED_POSITION 20
-  #define BACK_PROBE_BED_POSITION 140
+  #define LEFT_PROBE_BED_POSITION 55
+  #define RIGHT_PROBE_BED_POSITION 205
+  #define FRONT_PROBE_BED_POSITION 40
+  #define BACK_PROBE_BED_POSITION 175
 
   // The Z probe minimum outer margin (to validate G29 parameters).
   #define MIN_PROBE_EDGE 10
